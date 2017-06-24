@@ -1,0 +1,23 @@
+{% extends "learning_logs/base.html" %}
+
+{% block header %}
+  <div class='jumbotron'>
+      <h1>Track your learning.</h1>        
+  </div>
+{% endblock %}
+
+{% block content %}
+  <h2>
+            {% if user.is_authenticated %}
+        Hello, {{ user.username }}.  Welcome 
+            {% else %}
+  <a href="{% url 'users:register' %}">Register an account</a>
+            {% endif %}
+       to make
+     your own Learning Log, and list the topics you're learning about.
+  </h2>
+  <h2>
+    Whenever you learn something new about a topic, make an entry 
+    summarizing what you've learned.
+  </h2>
+{% endblock %}

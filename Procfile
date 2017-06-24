@@ -1,0 +1,1 @@
+web:gunicorn LL.wsgi --log-file -
