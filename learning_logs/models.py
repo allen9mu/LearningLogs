@@ -11,6 +11,8 @@ class Topic(models.Model):
         return self.text
     
     
+    
+    
 class Entry(models.Model):
     
     topic = models.ForeignKey(Topic)
